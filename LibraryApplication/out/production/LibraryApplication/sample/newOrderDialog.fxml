@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane fx:controller="sample.DialogController" xmlns:fx="http://javafx.com/fxml">
+    <headerText>
+        you can add new borrower here:
+    </headerText>
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="ID Borrower" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="idBorrowerField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Label text="ID Book" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="idBookField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="Order Date" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="orderDate" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        </GridPane>
+    </content>
+</DialogPane>

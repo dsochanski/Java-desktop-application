@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane fx:controller="sample.DialogController" xmlns:fx="http://javafx.com/fxml">
+    <headerText>
+        We can add new Book here:
+    </headerText>
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="Book Title" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="titleField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Label text="Book Description" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="descriptionField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="Category Id" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="categoryIdField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <Label text="Author Id" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="authorIdField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        </GridPane>
+    </content>
+</DialogPane>
