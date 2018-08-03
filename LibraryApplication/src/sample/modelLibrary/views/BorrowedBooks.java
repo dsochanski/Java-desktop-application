@@ -1,41 +1,50 @@
 package sample.modelLibrary.views;
 
+import javafx.beans.property.SimpleStringProperty;
+
 public class BorrowedBooks {
 
-    private String bookTitle;
-    private String borrowerName;
-    private String borrowerLastName;
-    private String orderDate;
+    private SimpleStringProperty bookTitle;
+    private SimpleStringProperty borrowerName;
+    private SimpleStringProperty borrowerLastName;
+    private SimpleStringProperty orderDate;
+
+    public BorrowedBooks() {
+        this.bookTitle = new SimpleStringProperty();
+        this.borrowerName = new SimpleStringProperty();
+        this.borrowerLastName = new SimpleStringProperty();
+        this.orderDate = new SimpleStringProperty();
+    }
 
     public String getBookTitle() {
-        return bookTitle;
+        return bookTitle.get();
     }
 
     public void setBookTitle(String bookTitle) {
-        this.bookTitle = bookTitle;
+        this.bookTitle.set(bookTitle);
     }
 
     public String getBorrowerName() {
-        return borrowerName;
+        return borrowerName.get();
     }
 
     public void setBorrowerName(String borrowerName) {
-        this.borrowerName = borrowerName;
+        this.borrowerName.set(borrowerName);
     }
 
     public String getBorrowerLastName() {
-        return borrowerLastName;
+        return borrowerLastName.get();
     }
 
     public void setBorrowerLastName(String borrowerLastName) {
-        this.borrowerLastName = borrowerLastName;
+        this.borrowerLastName.set(borrowerLastName);
     }
 
     public String getOrderDate() {
-        return orderDate;
+        return orderDate.get();
     }
 
     public void setOrderDate(String orderDate) {
-        this.orderDate = orderDate;
+        this.orderDate.set(orderDate);
     }
 }

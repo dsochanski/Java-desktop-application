@@ -15,6 +15,7 @@ import javafx.scene.layout.BorderPane;
 import sample.modelLibrary.Author;
 import sample.modelLibrary.Category;
 import sample.modelLibrary.DatasourceLib;
+import sample.modelLibrary.views.BookAuthorCategory;
 
 import java.io.IOException;
 import java.util.List;
@@ -26,7 +27,11 @@ public class Controller {
     private BorderPane mainBorderPane;
 
     @FXML
-    private TableView<Category> queryTable;
+    private TableView queryTable;
+
+    @FXML
+    private TableView queryTable2;
+
 
     @FXML
     private ProgressBar progressBar;
@@ -161,6 +166,14 @@ public class Controller {
         new Thread(task).start();
     }
 
+    @FXML
+    public void listBooksForAuthorsAndCategories(){
+        Task<ObservableList<BookAuthorCategory>> task = new GetAllBooksAuthorCategory();
+        queryTable.itemsProperty().bind(task.valueProperty());
+
+        new  Thread(task).start();
+    }
+
 
     @FXML
     public void exitFromApplication(){
@@ -173,6 +186,14 @@ class GetAllCategoriesTask extends Task {
     public ObservableList<Category> call() {
         return FXCollections.observableArrayList(
                 DatasourceLib.getInstance().queryCategoryList()
+        );
+    }
+}
+
+class GetAllBooksAuthorCategory extends Task {
+    public ObservableList<BookAuthorCategory> call() {
+        return FXCollections.observableArrayList(
+                DatasourceLib.getInstance().queryBooksForAuthorsAndCategories()
         );
     }
 }

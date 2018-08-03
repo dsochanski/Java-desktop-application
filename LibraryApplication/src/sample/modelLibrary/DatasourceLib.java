@@ -14,7 +14,7 @@ public class DatasourceLib {
     public static final String DB_NAME = "library.db";
 
 
-    public static final String CONNECTION_STRING = "jdbc:sqlite:C:\\Users\\tadeuszx\\Music\\LibraryApplication\\" + DB_NAME;
+    public static final String CONNECTION_STRING = "jdbc:sqlite:C:\\Users\\Panstwo Sochanscy\\Music\\LibraryApplication\\" + DB_NAME;
 
     public static final String TABLE_AUTHOR = "author";
     public static final String COLUMN_AUTHOR_ID = "id_author";

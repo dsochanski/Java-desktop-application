@@ -35,21 +35,42 @@
     <center>
         <TableView fx:id="queryTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <columns>
-                <TableColumn prefWidth="${queryTable.width}" text="Query results:">
+                <TableColumn prefWidth="300" text="Book title">
                     <cellValueFactory>
-                        <PropertyValueFactory property="name"/>
+                        <PropertyValueFactory property="title" />
                     </cellValueFactory>
                 </TableColumn>
+                <TableColumn text="name"><cellValueFactory>
+                    <PropertyValueFactory property="authorName"/>
+                </cellValueFactory></TableColumn>
+                <TableColumn text="lastNAme" ><cellValueFactory>
+                    <PropertyValueFactory property="authorLastName"/>
+                </cellValueFactory></TableColumn>
+                <TableColumn text="category"><cellValueFactory>
+                    <PropertyValueFactory property="categoryName"/>
+                </cellValueFactory></TableColumn>
             </columns>
             <BorderPane.margin>
                 <Insets right="10.0" />
             </BorderPane.margin>
         </TableView>
+        <!--<TableView fx:id="queryTable2" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">-->
+            <!--<columns>-->
+                <!--<TableColumn prefWidth="300" text="Category name">-->
+                    <!--<cellValueFactory>-->
+                        <!--<PropertyValueFactory property="name" />-->
+                    <!--</cellValueFactory>-->
+                <!--</TableColumn>-->
+            <!--</columns>-->
+            <!--<BorderPane.margin>-->
+                <!--<Insets right="10.0" />-->
+            <!--</BorderPane.margin>-->
+        <!--</TableView>-->
     </center>
     <right>
         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="170.00" spacing="15.0" BorderPane.alignment="CENTER">
             <children>
-                <Button maxWidth="Infinity" mnemonicParsing="false" text="All My Books" />
+                <Button onAction="#listBooksForAuthorsAndCategories" maxWidth="Infinity" mnemonicParsing="false" text="All My Books" />
                 <Button maxWidth="Infinity" mnemonicParsing="false" text="Author List" />
                 <Button onAction="#listCategories" maxWidth="Infinity" mnemonicParsing="false" text="Category List" />
                 <Button maxWidth="Infinity" mnemonicParsing="false" text="Borrowers List" />

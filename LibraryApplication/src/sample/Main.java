@@ -14,7 +14,8 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("main.fxml"));
         Parent root = loader.load();
         Controller controller = loader.getController();
-        controller.listCategories();
+//        controller.listCategories();
+        controller.listBooksForAuthorsAndCategories();
 
         primaryStage.setTitle("My Library Database");
         primaryStage.setScene(new Scene(root, 1000, 600));
